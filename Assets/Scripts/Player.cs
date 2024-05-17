@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
 
     public Vector2 moveInput;
     public Animator animator;
+    private SpriteRenderer spriteRenderer;
 
     private CheckGround checkGround;
 
@@ -22,11 +23,14 @@ public class Player : MonoBehaviour
     //[SerializeField] private float attackDelayTime = 0.5f;
     //[SerializeField] private float currentAttackDelayTime = 0;
 
+    private enum MovementState { idle, running, jumping, falling, attacking }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         checkGround = GetComponentInChildren<CheckGround>();
-        //animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -41,7 +45,28 @@ public class Player : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
             jumpCount++;
         }
+        UpdateAnimation();
 
+    }
+
+    private void UpdateAnimation()
+    {
+        MovementState state;
+        if (moveInput.x > 0)
+        {
+            spriteRenderer.flipX = false;
+            state = MovementState.running;
+        } 
+        else if (moveInput.x < 0)
+        {
+            state = MovementState.running;
+            spriteRenderer.flipX= true;
+        }
+        else
+        {
+            state = MovementState.idle;
+        }
+        animator.SetInteger("state", (int)state);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
