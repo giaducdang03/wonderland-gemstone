@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Platform
+  - Ladder
+  - Diamond
+  - Spike
+  - Slime
+  - Enemy
+  - AttackZone
   layers:
   - Default
   - TransparentFX
@@ -38,6 +46,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Main Background
+    uniqueID: 3951768185
+    locked: 0
+  - name: Background
+    uniqueID: 1278994911
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 3832012227
     locked: 0
