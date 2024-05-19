@@ -17,7 +17,6 @@ public class CheckGround : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGround = true;
-            Debug.Log("day la ground");
             
         }
     }
