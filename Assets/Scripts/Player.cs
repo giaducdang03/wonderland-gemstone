@@ -75,5 +75,9 @@ public class Player : MonoBehaviour
         {
             jumpCount = 0;
         }
+        if (collision.gameObject.CompareTag("Spike"))
+        {
+            this.enabled = false;
+        }
     }
 }

@@ -9,7 +9,7 @@ public class Conplete : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Finish"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
     }
 }
