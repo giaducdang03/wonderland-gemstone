@@ -418,8 +418,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 175765157}
-        m_TargetAssemblyTypeName: Retry, Assembly-CSharp
-        m_MethodName: StartGame
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -476,7 +476,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 175765151}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d29324a34ada5104c8483cd379f6b0c4, type: 3}
+  m_Script: {fileID: 11500000, guid: dca21af631399954b820ca6ddda55193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &267968836
@@ -969,8 +969,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1432540461}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: MoveToSetting
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: StartMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1432540455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 457e3220b8fca6946ab49d83138b1be4, type: 3}
+  m_Script: {fileID: 11500000, guid: dca21af631399954b820ca6ddda55193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1473079654
