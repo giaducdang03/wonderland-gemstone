@@ -8,9 +8,10 @@ using UnityEngine.UI;
 public class StartMenu : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Slider volumeSlider; //used for adjusting volume
-    public Slider vfxSlider; //used for adjusting visual effects
-    public AudioMixer mixer; // used to control audio settings 
+
+    [SerializeField] Slider volumeSlider;
+    [SerializeField] Slider vfxSlider; //used for adjusting visual effects
+    [SerializeField] AudioMixer mixer; // used to control audio settings 
 
 	//Strings used as keys for saving and loading player preferences.
 	private const string volumeKey = "Volume"; 
@@ -40,7 +41,7 @@ public class StartMenu : MonoBehaviour
     {
         SceneManager.LoadScene("StartScene");
     }
-    
+
     //Này là set up cho Volume 
     public void SetVolume()
     {
@@ -61,51 +62,52 @@ public class StartMenu : MonoBehaviour
         {
             float volumeValue = PlayerPrefs.GetFloat(volumeKey);
             volumeSlider.value = volumeValue;
-            mixer.SetFloat("volume",volumeValue); 
+            mixer.SetFloat("volume", volumeValue);
         }
         else
         {
-            //Set a default volume value if it's not saved yet//
+            // Set a default volume value if it's not saved yet
             float defaultVolume = 0.5f;
-            volumeSlider.value=defaultVolume;
+            volumeSlider.value = defaultVolume;
             mixer.SetFloat("volume", defaultVolume);
             SaveVolume(defaultVolume);
         }
     }
 
-    //Này là set up cho VFX 
-	public void SetVfx()
-	{
-		float vfxValue = vfxSlider.value;
-		mixer.SetFloat("vfx", vfxValue);
-		SaveVFX(vfxValue);
-	}
-	private void SaveVFX(float vfxValue)
-	{
-		PlayerPrefs.SetFloat(vfxKey, vfxValue);
-		PlayerPrefs.Save();
-	}
+    public void SetVfx()
+    {
+        float vfxValue = vfxSlider.value;
+        mixer.SetFloat("vfx", vfxValue);
+        SaveVFX(vfxValue);
+    }
 
-	private void LoadVFX()
-	{
-		if (PlayerPrefs.HasKey(vfxKey))
-		{
-			float vfxValue = PlayerPrefs.GetFloat(vfxKey);
-			vfxSlider.value = vfxValue;
-			mixer.SetFloat("vfx", vfxValue);
-		}
-		else
-		{
-			// Set a default vfx value if it's not saved yet
-			float defaultVFX = 0.5f;
-			vfxSlider.value = defaultVFX;
-			mixer.SetFloat("vfx", defaultVFX);
-			SaveVFX(defaultVFX);
-		}
-	}
+    private void SaveVFX(float vfxValue)
+    {
+        PlayerPrefs.SetFloat(vfxKey, vfxValue);
+        PlayerPrefs.Save();
+    }
 
-	public void MoveToSetting()
+    private void LoadVFX()
+    {
+        if (PlayerPrefs.HasKey(vfxKey))
+        {
+            float vfxValue = PlayerPrefs.GetFloat(vfxKey);
+            vfxSlider.value = vfxValue;
+            mixer.SetFloat("vfx", vfxValue);
+        }
+        else
+        {
+            // Set a default vfx value if it's not saved yet
+            float defaultVFX = 0.5f;
+            vfxSlider.value = defaultVFX;
+            mixer.SetFloat("vfx", defaultVFX);
+            SaveVFX(defaultVFX);
+        }
+    }
+
+
+    public void MoveToSetting()
 	{
-		SceneManager.LoadScene("Setting");
+		SceneManager.LoadScene("Settings");
 	}
 }
