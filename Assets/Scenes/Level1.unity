@@ -17503,6 +17503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveInput: {x: 0, y: 0}
   animator: {fileID: 0}
+  climbSpeed: 8
   jumpCount: 0
   maxJumpCount: 2
   moveSpeed: 5
@@ -19397,7 +19398,7 @@ GameObject:
   - component: {fileID: 1966566685}
   m_Layer: 0
   m_Name: EndLevel1
-  m_TagString: Finish
+  m_TagString: FinishLv1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

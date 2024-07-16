@@ -37,7 +37,15 @@ public class PlayerDeath : MonoBehaviour
 
     private void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        var currentScene = SceneManager.GetActiveScene().buildIndex;
+        if (currentScene == 1)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        } 
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
