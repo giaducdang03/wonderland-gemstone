@@ -12,6 +12,7 @@ TagManager:
   - Slime
   - Enemy
   - AttackZone
+  - GroundAttachAble
   layers:
   - Default
   - TransparentFX

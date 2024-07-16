@@ -14,7 +14,7 @@ public class CheckGround : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || (collision.gameObject.CompareTag("GroundAttachAble")))
         {
             isGround = true;
             
@@ -22,7 +22,7 @@ public class CheckGround : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground")||(collision.gameObject.CompareTag("GroundAttachAble")))
         {
             isGround = false;
         }
