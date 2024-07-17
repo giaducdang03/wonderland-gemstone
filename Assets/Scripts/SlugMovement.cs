@@ -6,14 +6,17 @@ public class SlugMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator animator;
+    //public BoxCollider2D colider;
     public GameObject pointA;
     public GameObject pointB;
     private Transform currentPoint;
     [SerializeField] public float moveSpeed = 4f;
+    [SerializeField] public bool isFlip = true;
 
     // Start is called before the first frame update
     void Start()
     {
+        //colider = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         currentPoint = pointA.transform;
@@ -43,11 +46,17 @@ public class SlugMovement : MonoBehaviour
         }
     }
 
+    
+
     private void Flip()
     {
-        Vector3 localScale = transform.localScale;
-        localScale.x *= -1;
-        transform.localScale = localScale;
+
+        if (isFlip)
+        {
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1;
+            transform.localScale = localScale;
+        }
     }
     private void OnDrawGizmos()
     {
