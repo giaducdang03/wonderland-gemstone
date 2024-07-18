@@ -97,7 +97,7 @@ public class SoundManager : MonoBehaviour
     {
         if (Instance == null)
         {
-            Instance = this;
+            Instance = Instance;
             DontDestroyOnLoad(gameObject);
         }
         else

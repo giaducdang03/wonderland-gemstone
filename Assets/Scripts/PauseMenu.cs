@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour
     public void PauseGame()
     {
         pauseMenu.SetActive(true);
-        Time.timeScale = 0f; // Pause the game by setting time scale to 0
+        Time.timeScale = 0f; // pause the game by setting time scale to 0
         isPaused = true;
     }
 
@@ -35,7 +35,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         volumeMenu.SetActive(false);
-        Time.timeScale = 1f; // Set the time scale back to normal
+        Time.timeScale = 1f; // set the time scale back to normal
         isPaused = false;
     }
 

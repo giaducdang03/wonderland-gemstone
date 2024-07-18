@@ -8,7 +8,6 @@
         public GameObject volumeMenu;
         public static bool isPaused;
 
-        // Start is called before the first frame update
         void Start()
         {
 /*            pauseMenu.SetActive(false);
@@ -22,7 +21,7 @@
         isPaused = false;
     }
 
-        // Update is called once per frame
+        // update is called once per frame
         void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape))
@@ -59,7 +58,7 @@
         {
         /*            pauseMenu.SetActive(false);
                     volumeMenu.SetActive(false);
-                    Time.timeScale = 1f; // Set the time scale back to normal
+                    Time.timeScale = 1f; // set the time scale back to normal
                     isPaused = false;*/
         if (pauseMenu != null)
         {
