@@ -705,8 +705,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43e4054752e49674fbe90b952268f3d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 827638782}
-  vfxSlider: {fileID: 2124134024}
   mixer: {fileID: 24100000, guid: 3ecf1a6f975b54d40802d1b0c738205d, type: 2}
 --- !u!114 &426989148
 MonoBehaviour:
@@ -1338,7 +1336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 827638780}
   - component: {fileID: 827638782}
-  - component: {fileID: 827638781}
+  - component: {fileID: 827638783}
   m_Layer: 5
   m_Name: Slider_Audio
   m_TagString: Untagged
@@ -1369,21 +1367,6 @@ RectTransform:
   m_AnchoredPosition: {x: 30.4, y: 20.5}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &827638781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 827638779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43e4054752e49674fbe90b952268f3d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 827638782}
-  vfxSlider: {fileID: 2124134024}
-  mixer: {fileID: 24100000, guid: 3ecf1a6f975b54d40802d1b0c738205d, type: 2}
 --- !u!114 &827638782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1447,6 +1430,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &827638783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827638779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 559f635f2e7adad4095b65d4db03bd6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxSlider: {fileID: 2124134024}
+  volumeSlider: {fileID: 827638782}
+  mixer: {fileID: 24100000, guid: 3ecf1a6f975b54d40802d1b0c738205d, type: 2}
 --- !u!1 &1060152438
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,7 +2237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2124134022}
   - component: {fileID: 2124134024}
-  - component: {fileID: 2124134023}
+  - component: {fileID: 2124134025}
   m_Layer: 5
   m_Name: Slider_VFX
   m_TagString: Untagged
@@ -2270,21 +2268,6 @@ RectTransform:
   m_AnchoredPosition: {x: 25.9, y: -17}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2124134023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2124134021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43e4054752e49674fbe90b952268f3d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 827638782}
-  vfxSlider: {fileID: 2124134024}
-  mixer: {fileID: 24100000, guid: 3ecf1a6f975b54d40802d1b0c738205d, type: 2}
 --- !u!114 &2124134024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2336,7 +2319,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2124134023}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
         m_MethodName: SetVfx
         m_Mode: 1
@@ -2348,6 +2331,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2124134025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124134021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 559f635f2e7adad4095b65d4db03bd6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxSlider: {fileID: 2124134024}
+  volumeSlider: {fileID: 827638782}
+  mixer: {fileID: 24100000, guid: a472238063ca08a468b50667e11f75c7, type: 2}
 --- !u!1 &2142900039
 GameObject:
   m_ObjectHideFlags: 0
