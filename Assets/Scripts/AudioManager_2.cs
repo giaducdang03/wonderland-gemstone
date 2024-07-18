@@ -1,83 +1,128 @@
+//using System;
 //using System.Collections;
 //using System.Collections.Generic;
 //using UnityEngine;
-//using UnityEngine.Audio;
 //using UnityEngine.UI;
 
-//public class SoundManager : MonoBehaviour
+//public class AudioManager2 : MonoBehaviour
 //{
+//    //public static AudioManager Instance;
 
-//    ///*    public Sound[] musicSound, sfxSound;
-//    //    public AudioSource musicSource, sfxSource;*/
-//    //[SerializeField] Slider vfxSlider;
-//    //[SerializeField] Slider volumeSlider;
-//    //[SerializeField] AudioMixer mixer;
-//    //private const string vfxKey = "VFXVolume";
+//    //public Sound[] musicSounds, sfxSounds;
+//    //public AudioSource musicSource, sfxSource;
 
-//    //// Start is called before the first frame update
-//    //void Start()
+//    //private void Awake()
 //    //{
-//    //    if (!PlayerPrefs.HasKey("musicVolume"))
+//    //    if (Instance == null)
 //    //    {
-//    //        PlayerPrefs.SetFloat("musicVolume", 1);
-//    //        LoadVolume();
-//    //        vfxSlider.onValueChanged.AddListener(SetVfx);
-//    //        LoadVFX();
+//    //        Instance = this;
+//    //        DontDestroyOnLoad(gameObject);
 //    //    }
 //    //    else
 //    //    {
-//    //        LoadVolume();
-//    //        vfxSlider.onValueChanged.AddListener(SetVfx);
-//    //        LoadVFX();
+//    //        Destroy(gameObject);
 //    //    }
 //    //}
-//    //public void SetVolume()
-//    //{
-//    //    Debug.Log("duma m");
-//    //    AudioListener.volume = volumeSlider.value;
-//    //}
 
-//    //public void LoadVolume()
+//    //public void PlayMusic(string name)
 //    //{
-//    //    volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
-//    //}
-
-//    //public void SaveVolume()
-//    //{
-//    //    PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
-//    //}
-
-//    //public void SetVfx(float vfxValue)
-//    //{
-//    //    mixer.SetFloat("vfx", Mathf.Log10(vfxValue) * 20); // Assuming vfxSlider value is between 0 and 1
-//    //    SaveVFX(vfxValue);
-//    //}
-
-//    //private void SaveVFX(float vfxValue)
-//    //{
-//    //    PlayerPrefs.SetFloat(vfxKey, vfxValue);
-//    //    PlayerPrefs.Save();
-//    //}
-
-//    //private void LoadVFX()
-//    //{
-//    //    if (PlayerPrefs.HasKey(vfxKey))
+//    //    Sound s = Array.Find(musicSounds, match => match.name == name);
+//    //    if (s == null)
 //    //    {
-//    //        float vfxValue = PlayerPrefs.GetFloat(vfxKey);
-//    //        vfxSlider.value = vfxValue;
-//    //        mixer.SetFloat("vfx", Mathf.Log10(vfxValue) * 20); // Assuming vfxSlider value is between 0 and 1
+//    //        Debug.Log("sound " + name + " not found!");
 //    //    }
 //    //    else
 //    //    {
-//    //        // Set a default vfx value if it's not saved yet
-//    //        float defaultVFX = 0.5f;
-//    //        vfxSlider.value = defaultVFX;
-//    //        mixer.SetFloat("vfx", Mathf.Log10(defaultVFX) * 20); // Assuming defaultVFX value is between 0 and 1
-//    //        SaveVFX(defaultVFX);
+//    //        musicSource.clip = s.clip;
+//    //        musicSource.Play();
 //    //    }
 //    //}
 
-//    public static SoundManager Instance { get; private set; }
+//    //public void PlaySFX(string name)
+//    //{
+//    //    Sound s = Array.Find(sfxSounds, match => match.name == name);
+//    //    if (s == null)
+//    //    {
+//    //        Debug.Log("sound " + name + " not found!");
+//    //    }
+//    //    else
+//    //    {
+//    //        sfxSource.pitch = 1;
+//    //        sfxSource.clip = s.clip;
+//    //        sfxSource.PlayOneShot(s.clip);
+//    //    }
+//    //}
+
+//    //public void StartPlaySFX(string name)
+//    //{
+//    //    Sound s = Array.Find(sfxSounds, match => match.name == name);
+//    //    if (s == null)
+//    //    {
+//    //        Debug.Log("sound " + name + " not found!");
+//    //    }
+//    //    else
+//    //    {
+//    //        sfxSource.pitch = 1;
+//    //        sfxSource.clip = s.clip;
+//    //        sfxSource.loop = true;
+//    //        sfxSource.Play();
+//    //    }
+//    //}
+
+//    //public void StopPlaySFX()
+//    //{
+//    //    sfxSource.loop = false;
+//    //    sfxSource.Stop();
+//    //}
+
+//    //public bool ToggleMusic()
+//    //{
+//    //    musicSource.mute = !musicSource.mute;
+//    //    return musicSource.mute;
+//    //}
+
+//    //public bool ToggleSFX()
+//    //{
+//    //    sfxSource.mute = !sfxSource.mute;
+//    //    return sfxSource.mute;
+//    //}
+
+//    //public void MusicVolume(float volume)
+//    //{
+//    //    musicSource.volume = volume;
+//    //}
+
+//    //public void SFXVolume(float volume)
+//    //{
+//    //    sfxSource.volume = volume;
+//    //}
+//    //public float GetMusicVolume()
+//    //{
+//    //    return musicSource.volume;
+//    //}
+//    //public float GetSFXVolume()
+//    //{
+//    //    return sfxSource.volume;
+//    //}
+//    //public void PlaySFXRandomPitch(string name, float start = 0, float end = 3)
+//    //{
+//    //    Sound s = Array.Find(sfxSounds, match => match.name == name);
+//    //    if (s == null)
+//    //    {
+//    //        Debug.Log("sound " + name + " not found!");
+//    //    }
+//    //    else
+//    //    {
+//    //        float e = UnityEngine.Random.Range(start, end);
+//    //        sfxSource.pitch = e;
+//    //        sfxSource.clip = s.clip;
+//    //        sfxSource.PlayOneShot(s.clip);
+//    //    }
+
+
+//    //}
+
+//    public static AudioManager2 Instance { get; private set; }
 
 //    [Header("Volume Settings")]
 //    [Range(0, 1)] public float masterVolume = 1f;
@@ -117,7 +162,7 @@
 //            musicVolumeSlider.value = musicVolume;
 //        if (sfxVolumeSlider != null)
 //            sfxVolumeSlider.value = sfxVolume;
-        
+
 //        // Add listeners to sliders
 //        if (masterVolumeSlider != null)
 //            masterVolumeSlider.onValueChanged.AddListener(SetMasterVolume);
