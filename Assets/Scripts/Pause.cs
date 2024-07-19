@@ -1,47 +1,38 @@
-    using System.Collections;
-    using System.Collections.Generic;
-    using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-    public class Pause : MonoBehaviour
+public class Pause : MonoBehaviour
+{
+    public GameObject pauseMenu;
+    public GameObject volumeMenu;
+    public static bool isPaused = false;
+
+    // Start is called before the first frame update
+    void Start()
     {
-        public GameObject pauseMenu;
-        public GameObject volumeMenu;
-        public static bool isPaused;
-
-        void Start()
-        {
-/*            pauseMenu.SetActive(false);
-            volumeMenu.SetActive(false);*/
-        if (pauseMenu != null)
-            pauseMenu.SetActive(false);
-
-        if (volumeMenu != null)
-            volumeMenu.SetActive(false);
-
-        isPaused = false;
+        pauseMenu.SetActive(false);
+        volumeMenu.SetActive(false);
     }
 
-        // update is called once per frame
-        void Update()
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (isPaused)
             {
-                if (isPaused)
-                {
-                    ResumeGame();
-                }
-                else
-                {
-                    PauseGame();
-                }
+                ResumeGame();
             }
-
+            else
+            {
+                PauseGame();
+            }
         }
-        public void PauseGame()
-        {
-        /*            pauseMenu.SetActive(true);
-                    Time.timeScale = 0f;
-                    isPaused = true;*/
+
+    }
+    public void PauseGame()
+    {
         if (pauseMenu != null)
         {
             pauseMenu.SetActive(true);
@@ -54,8 +45,8 @@
         }
     }
 
-        public void ResumeGame()
-        {
+    public void ResumeGame()
+    {
         /*            pauseMenu.SetActive(false);
                     volumeMenu.SetActive(false);
                     Time.timeScale = 1f; // set the time scale back to normal
@@ -73,10 +64,10 @@
         Time.timeScale = 1f; // Resume the game
         isPaused = false;
 
-        }
+    }
 
-        public void OpenVolumeMenu()
-        {
+    public void OpenVolumeMenu()
+    {
         /*            volumeMenu.SetActive(true);
                     pauseMenu.SetActive(false);*/
         if (volumeMenu != null && pauseMenu != null)
@@ -90,8 +81,8 @@
         }
     }
 
-        public void CloseVolumeMenu()
-        {
+    public void CloseVolumeMenu()
+    {
         /*            volumeMenu.SetActive(false);
                     pauseMenu.SetActive(true);*/
 
@@ -106,4 +97,4 @@
         }
     }
 
-    }
+}
