@@ -261,8 +261,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -255.6, y: -5.2025}
-  m_SizeDelta: {x: 288.8, y: 476.13}
+  m_AnchoredPosition: {x: -259.9, y: -8.725}
+  m_SizeDelta: {x: 220.02, y: 293.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &215896833
 MonoBehaviour:
@@ -361,8 +361,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
-    m_FontStyle: 0
+    m_FontSize: 20
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
@@ -626,8 +626,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 45
-    m_FontStyle: 0
+    m_FontSize: 29
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 50
@@ -637,7 +637,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Settings
+  m_Text: SETTINGS
 --- !u!222 &346486959
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -942,7 +942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30.4, y: 22}
+  m_AnchoredPosition: {x: 30.4, y: 11.199997}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &498427057
@@ -962,7 +962,7 @@ MonoBehaviour:
   sfxVolume: 1
   musicSource: {fileID: 645144336}
   sfxSource: {fileID: 645144336}
-  masterVolumeSlider: {fileID: 498427058}
+  masterVolumeSlider: {fileID: 1769297447}
   musicVolumeSlider: {fileID: 498427058}
   sfxVolumeSlider: {fileID: 1494322532}
 --- !u!114 &498427058
@@ -1009,7 +1009,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 410064362}
   m_HandleRect: {fileID: 1801009575}
   m_Direction: 0
-  m_MinValue: -80
+  m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
@@ -1176,7 +1176,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1727,8 +1727,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: -193.27}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -327.1, y: -129.9}
+  m_SizeDelta: {x: 77.04, y: 59.268}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1302739588
 MonoBehaviour:
@@ -1917,7 +1917,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30.4, y: -12.7}
+  m_AnchoredPosition: {x: 30.4, y: -23.500004}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1494322531
@@ -1937,7 +1937,7 @@ MonoBehaviour:
   sfxVolume: 1
   musicSource: {fileID: 645144336}
   sfxSource: {fileID: 645144336}
-  masterVolumeSlider: {fileID: 1494322532}
+  masterVolumeSlider: {fileID: 1769297447}
   musicVolumeSlider: {fileID: 498427058}
   sfxVolumeSlider: {fileID: 1494322532}
 --- !u!114 &1494322532
@@ -1984,7 +1984,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 311816395}
   m_HandleRect: {fileID: 2057934222}
   m_Direction: 0
-  m_MinValue: -80
+  m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
@@ -2108,8 +2108,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -255.6, y: -193.27}
-  m_SizeDelta: {x: 160.41, y: 100}
+  m_AnchoredPosition: {x: -264.6, y: -125.87}
+  m_SizeDelta: {x: 92.49, y: 67.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618079934
 MonoBehaviour:
@@ -2268,7 +2268,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30.4, y: 54.4}
+  m_AnchoredPosition: {x: 30.4, y: 43.6}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1769297447
@@ -2315,7 +2315,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 1851479061}
   m_HandleRect: {fileID: 751688399}
   m_Direction: 0
-  m_MinValue: -80
+  m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
@@ -2526,8 +2526,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -152, y: -193.27}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -202.7, y: -129.72}
+  m_SizeDelta: {x: 69.05, y: 59.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1852234876
 MonoBehaviour:
@@ -2859,8 +2859,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 262.96, y: -5.2013}
-  m_SizeDelta: {x: 274.07, y: 476.13}
+  m_AnchoredPosition: {x: 270.3, y: -17.79}
+  m_SizeDelta: {x: 226.79, y: 274.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2142900041
 MonoBehaviour:
