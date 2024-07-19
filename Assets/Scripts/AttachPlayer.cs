@@ -13,7 +13,7 @@ namespace Assets.Scripts
             rb = GetComponent<Rigidbody2D>();
             if (rb == null)
             {
-                Debug.LogError("Rigidbody2D component is missing from this GameObject");
+                Debug.LogError("rigidbody2D component missing from this gameObject");
             }
         }
 

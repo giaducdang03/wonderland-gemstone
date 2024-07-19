@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public Text txtScore; // Reference to the UI text element for displaying the score
-    public Text txtHighScore; // Reference to the UI text element for displaying the high score
+    public Text txtScore; 
+    public Text txtHighScore; 
 
-    int score; // The current score value
-    int highscore = 0; // The high score value
+    int score; 
+    int highscore = 0; 
 
     void Start()
     {
@@ -20,16 +20,16 @@ public class ScoreManager : MonoBehaviour
         {
             highscore = PlayerPrefs.GetInt("highscore", 0);
             score = 0;
-            txtScore.text = "SCORE: " + score; // Display the initial score
-            txtHighScore.text = "HIGH SCORE: " + highscore.ToString(); // Display the initial high score
+            txtScore.text = "SCORE: " + score; // display the initial score
+            txtHighScore.text = "HIGH SCORE: " + highscore.ToString(); // display the initial high score
         }
         else
         {
             highscore = PlayerPrefs.GetInt("highscore", 0);
             var scoreLevel1 = PlayerPrefs.GetInt("scoreLevel1", 0);
             score = scoreLevel1;
-            txtScore.text = "SCORE: " + score; // Display the initial score
-            txtHighScore.text = "HIGH SCORE: " + highscore.ToString(); // Display the initial high score
+            txtScore.text = "SCORE: " + score; 
+            txtHighScore.text = "HIGH SCORE: " + highscore.ToString(); 
         }
     }
 
@@ -39,7 +39,7 @@ public class ScoreManager : MonoBehaviour
         {
             score += 1;
             Destroy(Diamond.gameObject);
-            txtScore.text = "SCORE: " + score; // Display the initial score
+            txtScore.text = "SCORE: " + score; // display the initial score new game
             if (highscore < score)
                 PlayerPrefs.SetInt("highscore", score);
         }

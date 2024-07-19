@@ -49,7 +49,7 @@ public class Pause : MonoBehaviour
     {
         /*            pauseMenu.SetActive(false);
                     volumeMenu.SetActive(false);
-                    Time.timeScale = 1f; // Set the time scale back to normal
+                    Time.timeScale = 1f; // set the time scale back to normal
                     isPaused = false;*/
         if (pauseMenu != null)
         {

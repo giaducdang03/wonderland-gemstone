@@ -13,7 +13,6 @@ public class SlugMovement : MonoBehaviour
     [SerializeField] public float moveSpeed = 4f;
     [SerializeField] public bool isFlip = true;
 
-    // Start is called before the first frame update
     void Start()
     {
         //colider = GetComponent<BoxCollider2D>();
@@ -22,7 +21,7 @@ public class SlugMovement : MonoBehaviour
         currentPoint = pointA.transform;
     }
 
-    // Update is called once per frame
+    // update is called once per frame
     void Update()
     {
         Vector2 point = currentPoint.position - transform.position;
